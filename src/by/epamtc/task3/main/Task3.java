@@ -1,6 +1,5 @@
 package by.epamtc.task3.main;
 
-import java.util.Arrays;
 
 public class Task3 {
     public static void main(String[] args) {
@@ -13,19 +12,33 @@ public class Task3 {
         cipher[firstIndex] = 4;
         cipher[secondIndex] = 3;
 
-        System.out.println("Исходный массив\n" + Arrays.toString(cipher));
+        System.out.println("Исходный массив:");
+        printerArray(cipher);
 
         basicCheck(firstIndex, secondIndex, cipher);
 
         substitution(cipher, firstIndex);
         substitution(cipher, secondIndex);
 
+
         int searchIndex = unknownValue(cipher);
+
         bruteForce(cipher, searchIndex);
+
         substitution(cipher, searchIndex);
 
-        System.out.println(Arrays.toString(cipher));
+        System.out.println("Результат:");
+        printerArray(cipher);
 
+    }
+
+    public static void printerArray(int [] array){
+
+        for (int i = 0; i < array.length; i++){
+
+            System.out.print(array[i]+" ");
+        }
+        System.out.println();
     }
 
     public static int unknownValue(int[] array) {

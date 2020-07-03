@@ -19,6 +19,7 @@ public class Task5 {
             if (i % 2 == 0) {
 
                 if (minimalValue > array[i]) {
+
                     minimalValue = array[i];
                 }
 
@@ -36,6 +37,7 @@ public class Task5 {
             if (i % 2 == 1) {
 
                 if (maxValue < array[i]) {
+
                     maxValue = array[i];
                 }
 

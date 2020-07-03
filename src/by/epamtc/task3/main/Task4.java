@@ -5,10 +5,7 @@ public class Task4 {
     public static void main(String[] args) {
 
         int[] mas = {3, 3, 3, 8, 9, 7, 9, 9};
-        int[] frequency =new int[mas.length];
-
-        int element= 0;
-
+        int[] frequency = new int[mas.length];
 
         for (int i = 0; i < mas.length; i++) {
 
@@ -16,7 +13,7 @@ public class Task4 {
 
 
                 if (mas[i] == mas[j]) {
-                   frequency[i]++;
+                    frequency[i]++;
                 }
 
             }
@@ -25,21 +22,19 @@ public class Task4 {
         int freqResult = frequency[0];
         int valResult = mas[0];
 
-        for(int i = 0; i < frequency.length; i++){
+        for (int i = 0; i < frequency.length; i++) {
 
-            if(frequency[i] > freqResult){
+            if (frequency[i] > freqResult) {
+
                 freqResult = frequency[i];
                 valResult = mas[i];
             }
 
-            if(frequency[i] == freqResult && mas[i] < valResult){
+            if (frequency[i] == freqResult && mas[i] < valResult) {
 
                 valResult = mas[i];
-
             }
-
         }
-
 
         System.out.println(valResult);
     }

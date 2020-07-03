@@ -6,15 +6,15 @@ public class Task2 {
         int[] array = {9, 8, 3, 8, 9, 3, 9, 9};
 
         int minimalValue = array[0];
-        int repeatMin=0;
+        int repeatMin = 0;
 
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
 
-            if(array[i] == minimalValue){
+            if (array[i] == minimalValue) {
                 repeatMin++;
             }
 
-            if(array[i]<minimalValue){
+            if (array[i] < minimalValue) {
 
                 minimalValue = array[i];
                 repeatMin = 1;
@@ -24,22 +24,22 @@ public class Task2 {
 
         }
 
-        int [] modifedArray= new int[array.length - repeatMin];
+        int[] modifedArray = new int[array.length - repeatMin];
 
-        for (int i = 0, k = 0; i < array.length; i++){
+        for (int i = 0, k = 0; i < array.length; i++) {
 
-            if(array[i]!= minimalValue){
+            if (array[i] != minimalValue) {
+
                 modifedArray[k] = array[i];
                 k++;
+
             }
         }
 
-        for (int i = 0; i < modifedArray.length; i++){
+        for (int i = 0; i < modifedArray.length; i++) {
 
             System.out.println(modifedArray[i]);
         }
-
-
 
 
     }
